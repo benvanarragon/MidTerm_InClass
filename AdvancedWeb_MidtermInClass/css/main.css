@@ -6,11 +6,12 @@
 *Description: This is a one page website designed with the jquery mobile api for testing your personilty through a survey
 * This is the CSS file for the webpage
 */
+
 #homeStuff{
     margin-left: 10%;
     margin-right:10%;
 }
-
+/*makes text under icons dissapear when screen is smaller*/
 @media (max-width: 400px) {
   a{
       text-indent:-9999px;
@@ -18,19 +19,19 @@
 
   }  
 }
-
+/*centers the image*/
 #center{
     text-align:center;
     font: 30px Arial;
 }
-
+/*aligns image*/
 .images{
     display:block;
     margin: 15px auto;
     
 
 }
-
+/*for header logo*/
 #logo{
     display:block;
     margin: 0px auto;
