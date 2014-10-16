@@ -1,4 +1,9 @@
 ﻿<!-- Example jQuery Mobile File -->
+<!--File Name: AdvancedWeb_MidtermInClass index.html-->
+<!--Author: Benjamin Vanarragon-->
+<!--Personality Survey-->
+<!--Date October 16/2014-->
+<!--Description: This is a one page website designed with the jquery mobile api for testing your personilty through a survey-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,38 +21,214 @@
     <!--HOME Page-->
 <div data-role="page" id="home">
   <div data-role="header" >
-    <h1>mySite</h1>
+    <h1>Personality Survey</h1>
+    <img id="logo" src="img/logo.png" />
   </div>
   <div data-role="navbar">
     <ul>
       <li><a href="#home" class="ui-btn-active ui-state-persist"  data-icon="home">Home</a></li>
-      <li><a href="#services" data-icon="check">Services</a></li>
+      <li><a href="#survey" data-icon="check">Survey</a></li>
       <li><a href="#contact" data-icon="info">Contact</a></li>
     </ul>
   </div>
   <section role="main" class="ui-content">
     <p> This is my homepage content</p>
-      <img id="colorWheel" src="img/ColourWheel.png" />
+      <img class="images" src="img/ColourWheel.png" />
   </section>
   <div data-role="footer"  data-position="fixed">
     <h4>©2014 All Rights Reserved.</h4>
   </div>
 </div>
 
-    <!--Services Page-->
-    <div data-role="page" id="services">
+    <!--Survey Page-->
+    <div data-role="page" id="survey">
         <div data-role="header">
-            <h1>mySite</h1>
+            <h1>Survey Questions</h1>
+            <img id="logo" src="img/logo.png" />
         </div>
         <div data-role="navbar">
             <ul>
                 <li><a href="#home"  data-icon="home">Home</a></li>
-                <li><a href="#services" class="ui-btn-active ui-state-persist" data-icon="check">Services</a></li>
+                <li><a href="#survey" class="ui-btn-active ui-state-persist" data-icon="check">Survey</a></li>
                 <li><a href="#contact" data-icon="info">Contact</a></li>
             </ul>
         </div>
-        <div data-role="content"> <a href="#dialog1" class="ui-btn ui-shadow ui-btn-inline ui-btn-b">my Dialog</a> </div>
+        <div data-role="content">
+            <form action="" method="get">
+                <!--Question 1-->
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>1.	You prefer to keep your appearance:</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="off">
+                    <label for="radio-choice-v-6a">Functional </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">Fashionable </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="off">
+                    <label for="radio-choice-v-6c">Casual </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="off">
+                    <label for="radio-choice-v-6d">Conservative </label>
+                </fieldset>
+                <!--next button-->
+                <input type="submit" value="Submit" />
+                <a href="#question2" onclick="document.getElementById('survey').submit();">Submit!</a>
+            </form>
+        </div>
         
+        
+        <div data-role="footer" data-position="fixed">
+            <h4>©2014 All Rights Reserved.</h4>
+        </div>
+    </div>
+
+    <!--Quesiton 2 Page-->
+    <div data-role="page" id="question2">
+        <div data-role="header">
+            <h1>Survey Questions</h1>
+            <img id="logo" src="img/logo.png" />
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#survey" class="ui-btn-active ui-state-persist" data-icon="check">Survey</a></li>
+                <li><a href="#contact" data-icon="info">Contact</a></li>
+            </ul>
+        </div>
+       <div data-role="content">
+            <form>
+                <!--Question 2-->
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>2.	What types of goals do you set for yourself?</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="off">
+                    <label for="radio-choice-v-6a">Challenging Goals </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">I don’t Set Goals </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="off">
+                    <label for="radio-choice-v-6c">Short-Term Goals </label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="off">
+                    <label for="radio-choice-v-6d">Long-Term Goals </label>
+                </fieldset>
+            </form>
+        </div>
+        <!--next button-->
+        <a href="#question3" class="ui-btn">Next Question</a>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>©2014 All Rights Reserved.</h4>
+        </div>
+    </div>
+
+    <!--Question 3 Page-->
+    <div data-role="page" id="question3">
+        <div data-role="header">
+            <h1>Survey Questions</h1>
+            <img id="logo" src="img/logo.png" />
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#survey" class="ui-btn-active ui-state-persist" data-icon="check">Survey</a></li>
+                <li><a href="#contact" data-icon="info">Contact</a></li>
+            </ul>
+        </div>
+       <div data-role="content">
+            <form>
+                 <!--Question 3-->
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>3.	Your optimal work environment is:</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="off">
+                    <label for="radio-choice-v-6a">Busy & Efficient</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">Stimulating & Social</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="off">
+                    <label for="radio-choice-v-6c">Relaxed & Friendly</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="off">
+                    <label for="radio-choice-v-6d">Structured & Organized</label>
+                </fieldset>
+            </form>
+        </div>
+        <!--next question-->
+        <a href="#question4" class="ui-btn">Next Question</a>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>©2014 All Rights Reserved.</h4>
+        </div>
+    </div>
+
+
+
+    <!--Question 4 Page-->
+    <div data-role="page" id="question4">
+        <div data-role="header">
+            <h1>Survey Questions</h1>
+            <img id="logo" src="img/logo.png" />
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#survey" class="ui-btn-active ui-state-persist" data-icon="check">Survey</a></li>
+                <li><a href="#contact" data-icon="info">Contact</a></li>
+            </ul>
+        </div>
+       <div data-role="content">
+            <form>
+               <!--Question 4-->
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>4.	In Which type of environment do you prefer to work the MOST?:</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="off">
+                    <label for="radio-choice-v-6a">Where I have the freedom to set my own priorities</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">Where there are a lot of people to talk to</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="off">
+                    <label for="radio-choice-v-6c">Where there is a regular routine of events</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="off">
+                    <label for="radio-choice-v-6d">Where changes are made slowly and carefully</label>
+                </fieldset>
+            </form>
+        </div>
+        <!--next button-->
+        <a href="#question5" class="ui-btn">Next Question</a>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>©2014 All Rights Reserved.</h4>
+        </div>
+    </div>
+
+
+
+
+    <!--Question 5 Page-->
+    <div data-role="page" id="question5">
+        <div data-role="header">
+            <h1>Survey Questions</h1>
+            <img id="logo" src="img/logo.png" />
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#survey" class="ui-btn-active ui-state-persist" data-icon="check">Survey</a></li>
+                <li><a href="#contact" data-icon="info">Contact</a></li>
+            </ul>
+        </div>
+        <div data-role="buton" data-corners="true" data-shadows="true"> <a href="#dialog1" class="ui-btn ui-shadow ui-btn-inline ui-btn-b">Dialog</a></div>
+        <div data-role="content">
+            <form>
+                <!--Question 5-->
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>5.	Your preferred learning style is::</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="off">
+                    <label for="radio-choice-v-6a">Learning by teaching others</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">Learning through interactivity</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="off">
+                    <label for="radio-choice-v-6c">Learning by taking things slow and listening</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6d" value="off">
+                    <label for="radio-choice-v-6d">Learning by reading and independent research</label>
+                </fieldset>
+                <!--open up the dialog with results-->
+                <a href="#dialog1" class="ui-btn">Submit</a>
+            </form>
+        </div>
+        
+
         <div data-role="footer" data-position="fixed">
             <h4>©2014 All Rights Reserved.</h4>
         </div>
@@ -56,32 +237,43 @@
     <!--CONTACT Page-->
     <div data-role="page" id="contact">
         <div data-role="header">
-            <h1>mySite</h1>
+            <h1>Personality Survey</h1>
+            <img id="logo" src="img/logo.png" />
         </div>
         <div data-role="navbar">
             <ul>
                 <li><a href="#home"  data-icon="home">Home</a></li>
-                <li><a href="#services" data-icon="check">Services</a></li>
+                <li><a href="#survey" data-icon="check">Survey</a></li>
                 <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="info">Contact</a></li>
             </ul>
         </div>
         <div data-role="content">
+            <p>Enter some Contact Info</p>
             <form action="" method="get" name="contactForm">
-                Content
-                <button class="ui-btn ui-corner-all">submit</button>
+                
+                <input type="text" name="fname" id="fname" placeholder="First Name" />
+                <input type="text" name="lname" id="lname" placeholder="Last Name" />
+                <input type="text" name="pNum" id="pNum" placeholder="Phone Number" />
+                <input type="text" name="email" id="email" placeholder="Email" />
+
+                <button class="ui-btn ui-corner-all" type="submit">Submit</button>
             </form>
         </div>
         <div data-role="footer" data-position="fixed">
             <h4>©2014 All Rights Reserved.</h4>
         </div>
     </div>
+
+    <!--DIALOG PAGE-->
     <div data-role="page" id="dialog1" data-dialog="true">
         <div data-role="header">
-            <h1>My Dialog</h1>
+            <h1>Results</h1>
         </div>
         <div data-role="content">
-            <p> dialog content </p>
+            <p>results here</p>
+            <a href="index.html" class="ui-btn">OK</a>
         </div>
+        
 
         <div data-role="footer" data-position="fixed">
             <h4>©2014 All Rights Reserved.</h4>
